@@ -1,308 +1,450 @@
-<div
-  class="hero-section bg-gray-100 py-16"
+<section
+  class="relative overflow-hidden bg-white text-gray-900"
+  aria-labelledby="hero-heading"
   data-aos="fade-up"
   data-aos-duration="1000"
 >
-  <div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
-    <!-- Heading -->
-    <h1
-      class="text-4xl md:text-6xl font-extrabold text-gray-800 leading-tight"
-      data-aos="fade-down"
-      data-aos-duration="1000"
-    >
-      Empower Your Business Growth with
-      <span class="text-red-600">Elevate Xpertise</span>
-    </h1>
-
-    <!-- Subheading -->
-    <p
-      class="mt-6 text-lg md:text-xl text-gray-600"
-      data-aos="fade-up"
-      data-aos-duration="1200"
-    >
-      Unlock the full potential of your business through cutting-edge tech
-      solutions, strategic marketing, and AI-powered automation. Elevate your
-      expertise today!
-    </p>
-
-    <!-- Call to Action Buttons -->
-    <div
-      class="mt-8 flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6"
-    >
-      <a
-        href="#services"
-        class="px-8 py-4 bg-red-600 text-white text-lg font-medium rounded-lg shadow hover:bg-red-700 transition"
-        data-aos="zoom-in"
-        data-aos-duration="1500"
-      >
-        Explore Services
-      </a>
-      <a
-        (click)="navigateToContact()"
-        class="px-8 py-4 bg-gray-200 text-gray-800 text-lg font-medium rounded-lg shadow hover:bg-gray-300 transition"
-        data-aos="zoom-in"
-        data-aos-duration="1500"
-      >
-        Get in Touch
-      </a>
-    </div>
-  </div>
-</div>
-
-<div
-  class="services-section bg-white py-16"
-  id="services"
-  data-aos="fade-up"
-  data-aos-duration="1000"
->
-  <div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
-    <!-- Section Heading -->
-    <h2
-      class="text-3xl md:text-5xl font-extrabold text-gray-800"
-      data-aos="fade-up"
-      data-aos-duration="1200"
-    >
-      Our Services
-    </h2>
-    <p
-      class="mt-4 text-lg text-gray-600"
-      data-aos="fade-up"
-      data-aos-duration="1400"
-    >
-      Elevate Xpertise empowers your business with innovative solutions in
-      technology, marketing, and AI automation.
-    </p>
-
-    <!-- Cards Container -->
-    <div class="mt-12 grid gap-8 md:grid-cols-3">
-      <!-- Card 3: EX AI Automation -->
-      <div
-        class="card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition transform hover:scale-105"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-      >
-        <img
-          src="/assets/ai-image.svg"
-          alt="Tech Image"
-          class="mx-auto w-64 md:w-96 object-contain rounded-lg"
-        />
-        <h3 class="mt-6 text-xl font-bold text-gray-800">EX AI Automation</h3>
-        <p class="mt-4 text-gray-600">
-          Automates processes and boosts efficiency, saving time and reducing
-          workload with AI-driven tools.
-        </p>
-        <a
-          (click)="navigateToAutomation()"
-          class="mt-6 inline-block text-green-600 font-medium hover:underline"
-        >
-          Learn More
-        </a>
-      </div>
-
-      <!-- Card 1: EX Tech -->
-      <div
-        class="card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition transform hover:scale-105"
-        data-aos="fade-up"
-        data-aos-duration="1200"
-      >
-        <img
-          src="/assets/techimage.svg"
-          alt="Tech Image"
-          class="mx-auto w-64 md:w-96 object-contain rounded-lg"
-        />
-        <h3 class="mt-6 text-xl font-bold text-gray-800">EX Tech</h3>
-        <p class="mt-4 text-gray-600">
-          Explore the balance of technology and innovation to enhance business
-          operations with scalable solutions.
-        </p>
-        <a
-          (click)="navigateToTech()"
-          class="mt-6 inline-block text-red-600 font-medium hover:underline"
-        >
-          Learn More
-        </a>
-      </div>
-
-      <!-- Card 2: EX Marketing -->
-      <div
-        class="card bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition transform hover:scale-105"
-        data-aos="fade-up"
-        data-aos-duration="1400"
-      >
-        <img
-          src="/assets/marketing.svg"
-          alt="Tech Image"
-          class="mx-auto w-64 md:w-96 object-contain rounded-lg"
-        />
-        <h3 class="mt-6 text-xl font-bold text-gray-800">EX Marketing</h3>
-        <p class="mt-4 text-gray-600">
-          Specializes in driving business growth through strategic marketing,
-          lead generation, and brand development.
-        </p>
-        <a
-          (click)="navigateToMarketing()"
-          class="mt-6 inline-block text-blue-600 font-medium hover:underline"
-        >
-          Learn More
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- New Projects Section -->
-<div
-  class="projects-section bg-gray-100 py-16"
-  id="projects"
-  data-aos="fade-up"
-  data-aos-duration="1000"
->
-  <div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
-    <!-- Section Heading -->
-    <h2
-      class="text-3xl md:text-5xl font-extrabold text-gray-800"
-      data-aos="fade-up"
-      data-aos-duration="1200"
-    >
-      Our Projects
-    </h2>
-    <p
-      class="mt-4 text-lg text-gray-600"
-      data-aos="fade-up"
-      data-aos-duration="1400"
-    >
-      Take a look at some of our most impactful projects that have helped
-      businesses elevate their success.
-    </p>
-
-    <!-- Projects Container -->
-    <div class="mt-12 grid gap-8 md:grid-cols-3">
-      <!-- Dynamic Project Cards -->
-      <div
-        *ngFor="let project of projects"
-        class="project bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition transform hover:scale-105 flex flex-col"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-      >
-        <img
-          [src]="project.image"
-          [alt]="project.title"
-          class="mx-auto w-full h-56 object-cover rounded-lg"
-        />
-        <h3
-          class="mt-6 text-xl font-bold text-gray-800"
-          data-aos="fade-up"
-          data-aos-duration="1200"
-        >
-          {{ project.title }}
-        </h3>
-        <p
-          class="mt-4 text-gray-600 flex-grow"
-          data-aos="fade-up"
-          data-aos-duration="1400"
-        >
-          {{ project.description }}
-        </p>
-        <div class="mt-6 text-center"> <!-- Wrapper div for centering -->
-          <a
-            [href]="project.link"
-            class="inline-block text-red-600 font-medium hover:underline"
-            data-aos="fade-up"
-            data-aos-duration="1600"
-          >
-            View Project
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Button to View More Testimonials -->
-    <div class="mt-8">
-      <a
-        (click)="navigateToProjects()"
-        class="text-red-600 font-medium hover:underline"
-      >
-        See More Projects →
-      </a>
-    </div>
-  </div>
-</div>
-
-<!-- Testimonials Section Snippet -->
-<div class="testimonials">
   <div
-    class="testimonials-section bg-gray-50 py-16"
-    data-aos="fade-up"
-    data-aos-duration="1000"
+    class="mx-auto flex max-w-6xl flex-col gap-12 px-6 py-16 md:flex-row md:items-center md:py-24"
   >
-    <div class="max-w-7xl mx-auto px-6 md:px-12">
-      <!-- Header Section -->
-      <div
-        class="text-center mb-12"
+    <!-- Hero copy -->
+    <div class="md:w-1/2">
+      <p class="text-sm font-semibold uppercase tracking-[0.2em] text-red-400">
+        Strategy · Technology · Automation
+      </p>
+      <h1
+        id="hero-heading"
+        class="mt-4 text-4xl font-extrabold leading-tight tracking-tight text-gray-900 sm:text-5xl md:text-6xl"
         data-aos="fade-down"
         data-aos-duration="1000"
       >
-        <h1 class="text-4xl font-bold text-gray-900 mb-4">
-          What Our Clients Say
-        </h1>
-        <p class="text-lg text-gray-600">
-          Hear from businesses like yours who have transformed their operations
-          with Elevate Xpertise.
-        </p>
-      </div>
+        Turn ideas into
+        <span class="text-red-600">revenue‑driving digital products.</span>
+      </h1>
+      <p
+        class="mt-6 text-base text-gray-600 sm:text-lg"
+        data-aos="fade-up"
+        data-aos-duration="1200"
+      >
+        Elevate Xpertise partners with founders and teams to design, build, and
+        grow product‑led businesses — from customer‑ready websites to automated
+        funnels and AI‑powered workflows that scale with you.
+      </p>
 
-      <!-- Testimonial Videos -->
-      <div class="mt-16" data-aos="fade-up" data-aos-duration="1800">
-        <h2 class="text-3xl font-bold text-gray-800 text-center mb-6">
-          Watch Their Stories
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Dynamically render videos -->
-          <div
-            *ngFor="let video of videos"
-            class="relative pb-56 h-0 overflow-hidden rounded-lg shadow-lg"
-            data-aos="zoom-in"
-            data-aos-duration="2000"
-          >
-            <video class="absolute top-0 left-0 w-full h-full" controls>
-              <source [src]="video.url" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
+      <dl
+        class="mt-6 grid grid-cols-2 gap-4 text-sm text-gray-600 sm:max-w-md"
+        aria-label="Key outcomes we deliver"
+      >
+        <div class="space-y-1">
+          <dt class="font-medium text-gray-900">Faster launches</dt>
+          <dd class="text-gray-600">
+            Ship a polished MVP or marketing site in weeks, not months.
+          </dd>
         </div>
-      </div>
+        <div class="space-y-1">
+          <dt class="font-medium text-gray-900">Measurable growth</dt>
+          <dd class="text-gray-600">
+            Build journeys that convert visitors into qualified leads.
+          </dd>
+        </div>
+      </dl>
 
-      <div class="mt-8 text-center">
-        <a
-          (click)="navigateToTestimonials()"
-          class="text-red-600 font-medium hover:underline"
+      <!-- Call to Action Buttons -->
+      <div
+        class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4"
+      >
+        <button
+          type="button"
+          (click)="navigateToContact()"
+          class="inline-flex items-center justify-center rounded-full bg-red-500 px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-red-500/30 transition hover:bg-red-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-300"
         >
-          Load More Testimonials →
+          Book a strategy call
+        </button>
+        <a
+          href="#services"
+          class="inline-flex items-center justify-center rounded-full border border-gray-300 px-7 py-3 text-sm font-semibold text-gray-700 transition hover:border-gray-400 hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400"
+        >
+          Explore services
         </a>
       </div>
 
-      <!-- Call to Action Section -->
+      <!-- Quick trust indicators -->
+      <p class="mt-6 text-xs uppercase tracking-[0.18em] text-gray-500">
+        Based in Nairobi · Serving founders, SMEs & growth teams
+      </p>
+    </div>
+
+    <!-- Hero visual -->
+    <div
+      class="relative md:w-1/2"
+      data-aos="fade-left"
+      data-aos-duration="1200"
+      aria-hidden="true"
+    >
       <div
-        class="text-center mt-16"
-        data-aos="fade-up"
-        data-aos-duration="2600"
+        class="pointer-events-none absolute -left-24 -top-24 h-64 w-64 rounded-full bg-red-500/20 blur-3xl"
+      ></div>
+      <figure
+        class="relative overflow-hidden rounded-3xl border border-gray-200 bg-gray-50 shadow-2xl"
       >
-        <h2 class="text-3xl font-bold text-gray-800 mb-6">
-          Join Our Happy Clients
-        </h2>
-        <p class="text-lg text-gray-600 mb-8">
-          Ready to transform your business? Submit your story and inspire
-          others.
+        <img
+          src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=1200&q=80"
+          alt="Product and marketing team collaborating around a laptop"
+          class="h-full w-full object-cover"
+          loading="lazy"
+        />
+        <figcaption
+          class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-gray-900/90 to-transparent px-5 pb-5 pt-10 text-xs text-white"
+        >
+          <p class="font-medium">
+            From first idea to live product — Elevate Xpertise helps you launch
+            with confidence.
+          </p>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- Logos / social proof -->
+<section
+  class="border-y border-gray-200 bg-gray-50"
+  aria-label="Clients and partners"
+>
+  <div
+    class="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-8 text-gray-600 sm:flex-row sm:items-center sm:justify-between"
+  >
+    <p class="text-xs font-medium uppercase tracking-[0.2em] text-gray-500">
+      Trusted by teams building in
+      <span class="text-gray-900">real estate, education, logistics & more</span>
+    </p>
+    <div
+      class="flex flex-wrap items-center gap-x-8 gap-y-2 text-sm text-gray-600"
+    >
+      <span class="rounded-full border border-gray-300 px-3 py-1"
+        >City Realty</span
+      >
+      <span class="rounded-full border border-gray-300 px-3 py-1"
+        >Code Kenya</span
+      >
+      <span class="rounded-full border border-gray-300 px-3 py-1"
+        >Golden Sail Logistics</span
+      >
+      <span class="rounded-full border border-gray-300 px-3 py-1"
+        >Prudence Showroom</span
+      >
+    </div>
+  </div>
+</section>
+
+<!-- Services / value props -->
+<section
+  id="services"
+  class="bg-white py-16 text-gray-900 sm:py-20"
+  data-aos="fade-up"
+  data-aos-duration="1000"
+>
+  <div class="mx-auto max-w-6xl px-6">
+    <!-- Section Heading -->
+    <div class="max-w-3xl">
+      <h2
+        class="text-3xl font-extrabold tracking-tight sm:text-4xl"
+        data-aos="fade-up"
+        data-aos-duration="1200"
+      >
+        One partner for product, marketing, and automation.
+      </h2>
+      <p
+        class="mt-4 text-base text-gray-600 sm:text-lg"
+        data-aos="fade-up"
+        data-aos-duration="1400"
+      >
+        Elevate Xpertise blends product thinking, full‑stack development, and
+        growth strategy so you do not have to juggle multiple freelancers or
+        agencies. Choose the lane you need today — and grow into the rest.
+      </p>
+    </div>
+
+    <!-- Cards Container -->
+    <div class="mt-10 grid gap-8 md:grid-cols-3">
+      <!-- Card: EX Tech -->
+      <article
+        class="group flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-md transition hover:-translate-y-1 hover:border-red-400/70 hover:shadow-xl"
+        data-aos="fade-up"
+        data-aos-duration="1100"
+      >
+        <figure class="overflow-hidden rounded-xl">
+          <img
+            src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=900&q=80"
+            alt="Modern product dashboards displayed on multiple screens"
+            class="h-44 w-full object-cover transition duration-700 group-hover:scale-105"
+            loading="lazy"
+          />
+        </figure>
+        <h3 class="mt-5 text-lg font-semibold text-gray-900">EX Tech</h3>
+        <p class="mt-3 text-sm text-gray-600">
+          Design and build reliable, fast, and secure digital products — from
+          marketing sites to custom web apps — tailored to how your business
+          actually works.
         </p>
-        <div class="space-x-4">
-          <button
-            (click)="navigateToContact()"
-            class="bg-gray-200 text-gray-800 py-3 px-6 rounded-lg shadow-lg hover:bg-gray-300 transition"
+        <ul class="mt-4 space-y-1 text-xs text-gray-600">
+          <li>• UX/UI for web and mobile experiences</li>
+          <li>• MVP and product landing builds</li>
+          <li>• Ongoing optimisation and iteration</li>
+        </ul>
+        <button
+          type="button"
+          (click)="navigateToTech()"
+          class="mt-6 inline-flex items-center text-sm font-semibold text-red-600 hover:text-red-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400/60"
+        >
+          Explore EX Tech
+          <span aria-hidden="true" class="ml-1">→</span>
+        </button>
+      </article>
+
+      <!-- Card: EX Marketing -->
+      <article
+        class="group flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-md transition hover:-translate-y-1 hover:border-red-400/70 hover:shadow-xl"
+        data-aos="fade-up"
+        data-aos-duration="1300"
+      >
+        <figure class="overflow-hidden rounded-xl">
+          <img
+            src="/assets/marketing.svg"
+            alt="Team reviewing growth metrics and marketing campaigns"
+            class="h-44 w-full object-cover transition duration-700 group-hover:scale-105"
+            loading="lazy"
+          />
+        </figure>
+        <h3 class="mt-5 text-lg font-semibold text-gray-900">EX Marketing</h3>
+        <p class="mt-3 text-sm text-gray-600">
+          Build always‑on acquisition machines — emails, funnels, and campaigns
+          that consistently attract and convert the right customers.
+        </p>
+        <ul class="mt-4 space-y-1 text-xs text-gray-600">
+          <li>• Positioning and messaging frameworks</li>
+          <li>• Lead‑gen landing pages and campaigns</li>
+          <li>• Analytics, experimentation, and reporting</li>
+        </ul>
+        <button
+          type="button"
+          (click)="navigateToMarketing()"
+          class="mt-6 inline-flex items-center text-sm font-semibold text-red-600 hover:text-red-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400/60"
+        >
+          Explore EX Marketing
+          <span aria-hidden="true" class="ml-1">→</span>
+        </button>
+      </article>
+
+      <!-- Card: EX AI Automation -->
+      <article
+        class="group flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-md transition hover:-translate-y-1 hover:border-red-400/70 hover:shadow-xl"
+        data-aos="fade-up"
+        data-aos-duration="1500"
+      >
+        <figure class="overflow-hidden rounded-xl">
+          <img
+            src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=80"
+            alt="Automated workflows and AI assistants supporting customer operations"
+            class="h-44 w-full object-cover transition duration-700 group-hover:scale-105"
+            loading="lazy"
+          />
+        </figure>
+        <h3 class="mt-5 text-lg font-semibold text-gray-900">EX AI Automation</h3>
+        <p class="mt-3 text-sm text-gray-600">
+          Reduce manual busywork with smart workflows that connect your tools,
+          trigger actions, and keep your team focused on high‑value work.
+        </p>
+        <ul class="mt-4 space-y-1 text-xs text-gray-600">
+          <li>• AI‑assisted customer support and operations</li>
+          <li>• Automated lead routing and follow‑up</li>
+          <li>• Internal tools and workflow orchestration</li>
+        </ul>
+        <button
+          type="button"
+          (click)="navigateToAutomation()"
+          class="mt-6 inline-flex items-center text-sm font-semibold text-red-600 hover:text-red-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400/60"
+        >
+          Explore EX AI Automation
+          <span aria-hidden="true" class="ml-1">→</span>
+        </button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section
+  id="projects"
+  class="bg-gray-50 py-16 text-gray-900 sm:py-20"
+  data-aos="fade-up"
+  data-aos-duration="1000"
+>
+  <div class="mx-auto max-w-6xl px-6">
+    <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+      <div>
+        <h2
+          class="text-3xl font-extrabold tracking-tight sm:text-4xl"
+          data-aos="fade-up"
+          data-aos-duration="1200"
+        >
+          Selected work.
+        </h2>
+        <p
+          class="mt-3 max-w-xl text-sm text-gray-600 sm:text-base"
+          data-aos="fade-up"
+          data-aos-duration="1400"
+        >
+          We partner with organisations across real estate, education, logistics,
+          automotive, and faith communities to design experiences that feel
+          considered and trustworthy from the first click.
+        </p>
+      </div>
+      <div class="mt-2 md:mt-0">
+        <button
+          type="button"
+          (click)="navigateToProjects()"
+          class="inline-flex items-center rounded-full border border-gray-300 px-5 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-gray-700 hover:border-red-400 hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400/70"
+        >
+          View full case studies
+          <span aria-hidden="true" class="ml-2">↗</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="mt-10 grid gap-8 md:grid-cols-3">
+      <article
+        *ngFor="let project of projects"
+        class="group flex flex-col rounded-2xl border border-gray-200 bg-white p-4 shadow-md transition hover:-translate-y-1 hover:border-red-400/70 hover:shadow-xl"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        <figure class="overflow-hidden rounded-xl">
+          <img
+            [src]="project.image"
+            [alt]="project.title"
+            class="h-44 w-full object-cover transition duration-700 group-hover:scale-105"
+            loading="lazy"
+          />
+        </figure>
+        <h3 class="mt-5 text-base font-semibold text-gray-900">
+          {{ project.title }}
+        </h3>
+        <p class="mt-2 flex-grow text-sm text-gray-600">
+          {{ project.description }}
+        </p>
+        <div class="mt-4">
+          <a
+            *ngIf="project.link"
+            [href]="project.link"
+            class="inline-flex items-center text-sm font-semibold text-red-600 hover:text-red-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400/60"
+            target="_blank"
+            rel="noreferrer"
           >
-            Schedule a Free Consultation
-          </button>
+            View live project
+            <span aria-hidden="true" class="ml-1">↗</span>
+          </a>
         </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section Snippet -->
+<section
+  class="bg-white pb-20 pt-4 text-gray-900 sm:pt-10"
+  aria-labelledby="testimonials-heading"
+>
+  <div
+    class="mx-auto max-w-6xl px-6"
+    data-aos="fade-up"
+    data-aos-duration="1000"
+  >
+    <div
+      class="flex flex-col gap-6 border-y border-gray-200 py-10 md:flex-row md:items-center md:justify-between"
+    >
+      <div class="max-w-xl">
+        <h2
+          id="testimonials-heading"
+          class="text-3xl font-extrabold tracking-tight sm:text-4xl"
+        >
+          Proof from real clients.
+        </h2>
+        <p class="mt-3 text-sm text-gray-600 sm:text-base">
+          See how teams use Elevate Xpertise to launch new digital products,
+          modernise legacy experiences, and automate the busywork that slows
+          them down.
+        </p>
+      </div>
+      <div class="text-sm text-gray-600">
+        <p>
+          <span class="font-semibold text-gray-900">3+</span> testimonial stories
+          from founders, pastors, and operators — all shipped with measurable
+          outcomes.
+        </p>
+        <button
+          type="button"
+          (click)="navigateToTestimonials()"
+          class="mt-4 inline-flex items-center rounded-full border border-gray-300 px-5 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-gray-700 hover:border-red-400 hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400/70"
+        >
+          View all testimonials
+        </button>
+      </div>
+    </div>
+
+    <!-- Testimonial Videos -->
+    <div class="mt-10" data-aos="fade-up" data-aos-duration="1800">
+      <h3 class="text-base font-semibold uppercase tracking-[0.25em] text-gray-500">
+        Client stories
+      </h3>
+      <p class="mt-2 text-lg font-medium text-gray-900">
+        Watch how digital products and automation changed their daily work.
+      </p>
+      <div class="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Dynamically render videos -->
+        <article
+          *ngFor="let video of videos"
+          class="relative h-0 overflow-hidden rounded-2xl border border-gray-200 bg-white pb-[56.25%] shadow-md"
+          data-aos="zoom-in"
+          data-aos-duration="2000"
+        >
+          <video
+            class="absolute inset-0 h-full w-full rounded-2xl object-cover"
+            controls
+          >
+            <source [src]="video.url" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </article>
+      </div>
+    </div>
+
+    <!-- Call to Action Section -->
+    <div
+      class="mt-12 rounded-3xl border border-red-500/40 bg-gradient-to-r from-red-500/20 via-white to-white px-6 py-10 text-center sm:px-10 sm:text-left md:flex md:items-center md:justify-between"
+      data-aos="fade-up"
+      data-aos-duration="2600"
+    >
+      <div class="max-w-xl">
+        <h3 class="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">
+          Ready to map your next launch?
+        </h3>
+        <p class="mt-3 text-sm text-gray-600 sm:text-base">
+          Share where your product or business is today and where you want it to
+          be in six months. We will respond with a tailored roadmap — not a
+          generic pitch deck.
+        </p>
+      </div>
+      <div class="mt-6 md:mt-0 md:text-right">
+        <button
+          type="button"
+          (click)="navigateToContact()"
+          class="inline-flex items-center justify-center rounded-full bg-red-600 px-7 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-red-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400"
+        >
+          Schedule a free consultation
+        </button>
       </div>
     </div>
   </div>
-</div>
+</section>

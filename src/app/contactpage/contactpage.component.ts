@@ -47,6 +47,7 @@ export class ContactpageComponent {
     this.mailerService.sendMessage(this.contactForm).subscribe({
       next: (response) => {
         this.showSnackbar('Message sent successfully!', 'success');
+        this.sendWhatsAppMessage();
         this.clearForm();
       },
       error: (error) => {
@@ -54,6 +55,26 @@ export class ContactpageComponent {
         this.isSubmitting = false;
       }
     });
+  }
+
+  // Send message to WhatsApp
+  sendWhatsAppMessage(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      const phoneNumber = '16086081288'; // WhatsApp number without + sign
+      const message = this.formatWhatsAppMessage();
+      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+    }
+  }
+
+  // Format the message for WhatsApp
+  formatWhatsAppMessage(): string {
+    let message = `New Contact Form Submission\n\n`;
+    message += `Name: ${this.contactForm.fullName}\n`;
+    message += `Email: ${this.contactForm.email}\n`;
+    message += `Service: ${this.contactForm.service || 'General Inquiry'}\n\n`;
+    message += `Message:\n${this.contactForm.message}`;
+    return message;
   }
 
   // Show snackbar with a message

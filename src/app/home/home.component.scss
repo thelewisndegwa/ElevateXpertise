@@ -1,0 +1,16 @@
+section {
+  scroll-margin-top: 5rem;
+}
+
+.hero-section {
+  background: radial-gradient(circle at top left, rgba(248, 113, 113, 0.22), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(15, 23, 42, 0.95), #020617);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-aos],
+  [data-aos][data-aos-duration] {
+    animation: none !important;
+    transition: none !important;
+  }
+}

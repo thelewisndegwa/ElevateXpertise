@@ -32,10 +32,16 @@ export interface Project {
       link: 'https://prudenceshowroom.com/', // Replace with your live project URL
     },
     {
-      title: 'Pceamakupaparish',
+      title: 'P.C.E.A Makupa Parish',
       description: "Welcome to P.C.E.A Makupa Parish, a place where faith and community come together to create a profound spiritual journey. We have been a steadfast presence in the lives of our congregation, nurturing and fostering spiritual growth. As we continue to evolve and adapt to the changing world, our commitment to spreading the message of love and hope remains unwavering. Join us in our journey of faith and be part of a community that makes a positive impact in the world. Learn about our services, leadership, and find opportunities to engage with us both in person and virtually.",
       image: '/assets/pceamakupaparish.svg',
       link: 'https://pceamakupaparish.org/', // Replace with your live project URL
+    },
+    {
+      title: 'Biashara Assistant',
+      description: 'Your Smart WhatsApp Assistant for Business. Biashara-Assistant helps Kenyan businesses automate customer service, handle bookings, and accept M-Pesa payments directly through WhatsApp. Built for salons, restaurants, service providers, and retail shops to save time and never miss a customer.',
+      image: 'https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg',
+      link: 'https://thelewisndegwa.github.io/biashara-assistant-site/',
     } 
         
  

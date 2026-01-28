@@ -23,7 +23,7 @@ export interface Project {
       title: 'Golden Sail Rong Da Logistics',
       description: 'Golden Sail App is a digital solution designed to optimize cargo transportation, fleet management, and supply chain operations. It connects shippers, carriers, and drivers on a unified platform, ensuring real-time tracking, efficient route planning, and seamless communication between stakeholders.',
       image: '/assets/dashboard.svg',
-      link: '', // Replace with your live project URL
+      link: 'https://goldensail.de/',
     },
     {
       title: 'Prudence Showroom',

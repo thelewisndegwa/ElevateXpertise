@@ -9,4 +9,73 @@ header {
   main {
     padding-top: 60px; /* Adjust this value based on your navbar height */
   }
+
+  /* Floating WhatsApp Button */
+  .whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    padding: 0;
+    animation: pulse 2s infinite;
+  }
+
+  .whatsapp-float:hover {
+    background-color: #20ba5a;
+    transform: scale(1.1);
+    box-shadow: 4px 4px 8px #666;
+  }
+
+  .whatsapp-icon {
+    width: 35px;
+    height: 35px;
+    fill: white;
+  }
+
+  .whatsapp-text {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .whatsapp-float {
+      width: auto;
+      height: 60px;
+      padding: 0 20px;
+      border-radius: 50px;
+      flex-direction: row;
+      gap: 10px;
+    }
+
+    .whatsapp-text {
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 600;
+      color: white;
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+  }
   

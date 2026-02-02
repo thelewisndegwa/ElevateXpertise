@@ -1,0 +1,31 @@
+<div class="blog-section bg-gray-100 py-16" id="blog" data-aos="fade-up" data-aos-duration="1000">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
+    <h2 class="text-3xl md:text-5xl font-extrabold text-gray-800" data-aos="fade-up" data-aos-duration="1200">
+      Blog
+    </h2>
+    <p class="mt-4 text-lg text-gray-600" data-aos="fade-up" data-aos-duration="1400">
+      Insights on mobile-first digital economies, AI adoption, and building for the Global South.
+    </p>
+
+    <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <article
+        *ngFor="let post of posts"
+        class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition transform hover:scale-105 text-left"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        <p class="text-sm text-gray-500">{{ post.date }}</p>
+        <h3 class="mt-2 text-xl font-bold text-gray-800">
+          {{ post.title }}
+        </h3>
+        <p class="mt-4 text-gray-600 line-clamp-3">{{ post.excerpt }}</p>
+        <a
+          [routerLink]="['/blog', post.slug]"
+          class="mt-6 inline-block text-red-600 font-medium hover:underline"
+        >
+          Read more
+        </a>
+      </article>
+    </div>
+  </div>
+</div>

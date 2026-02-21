@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class VideoServiceService {
 
-  // private apiUrl = 'https://api.elev8expertise.com/api/videos';
+  // private apiUrl = 'https://api.elev8eexpertise.com/api/videos';
   private apiUrl = 'http://127.0.0.1:8000/api/videos'
 
   constructor(private http: HttpClient) { }

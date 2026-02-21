@@ -1,5 +1,5 @@
 {
-  "name": "elevate-expertise",
+  "name": "elev8-expertise",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:elevate-expertise": "node dist/elevate-expertise/server/server.mjs"
+    "serve:ssr:elev8-expertise": "node dist/elev8-expertise/server/server.mjs"
   },
   "private": true,
   "dependencies": {

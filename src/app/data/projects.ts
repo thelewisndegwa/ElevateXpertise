@@ -19,22 +19,8 @@ export interface Project {
       title: 'Landlord-Tenant Management App',
       description: 'A robust solution designed to simplify property management for landlords and enhance the renting experience for tenants. The app offers tools for lease agreements, payment tracking, maintenance requests, and communication between tenants and landlords.',
       image: '/assets/project.png',
-      link: 'https://cityrealtykenya.com/',
+      link: 'https://play.google.com/store/apps/details?id=com.cityrealty.landlord_tenant',
       tags: ['Mobile App', 'Real Estate'],
-    },
-    {
-      title: 'Topnotch Books',
-      description: 'KCSE revision made simple, visual, and deeply memorable. Topnotch Books is an e-commerce store built around the Octopus Revision Method—turning dense past papers into clear, visual study paths. Students get structured, exam-aligned practice with featured titles, educational videos, and a blog for revision tips and study strategies.',
-      image: '/assets/topnotch.png',
-      link: 'https://topnotch-ecom-store.vercel.app/',
-      tags: ['E-Commerce', 'Education'],
-    },
-    {
-      title: 'Code Kenya',
-      description: 'Code Kenya is an education platform offering career-focused bootcamps and internships in the tech industry. We provide hands-on training in fields such as Software Engineering, Artificial Intelligence, and Entrepreneurship. Our unique program combines intensive bootcamps with internship placements, ensuring students gain valuable real-world experience.',
-      image: '/assets/codekenya.svg',
-      link: 'https://www.codekenya.org/',
-      tags: ['Web App', 'Education'],
     },
     {
       title: 'Golden Sail Rong Da Logistics',
@@ -44,6 +30,13 @@ export interface Project {
       tags: ['Web App', 'Logistics'],
     },
     {
+      title: 'Topnotch Books',
+      description: 'KCSE revision made simple, visual, and deeply memorable. Topnotch Books is an e-commerce store built around the Octopus Revision Method—turning dense past papers into clear, visual study paths. Students get structured, exam-aligned practice with featured titles, educational videos, and a blog for revision tips and study strategies.',
+      image: '/assets/topnotch.png',
+      link: 'https://topnotch-ecom-store.vercel.app/',
+      tags: ['E-Commerce', 'Education'],
+    },
+    {
       title: 'Murphy Merchants Auctioneers',
       description: 'Murphy Merchants Auctioneers runs live auctions for office furniture, commercial property, vehicles, land, and electronics. Browse items, place bids, and contact the team for questions—all through a clear, secure platform designed for buyers and sellers across Kenya.',
       image: '/assets/murphy.png',
@@ -51,17 +44,17 @@ export interface Project {
       tags: ['Web App', 'Marketplace'],
     },
     {
+      title: 'Code Kenya',
+      description: 'Code Kenya is an education platform offering career-focused bootcamps and internships in the tech industry. We provide hands-on training in fields such as Software Engineering, Artificial Intelligence, and Entrepreneurship. Our unique program combines intensive bootcamps with internship placements, ensuring students gain valuable real-world experience.',
+      image: '/assets/codekenya.svg',
+      link: 'https://www.codekenya.org/',
+      tags: ['Web App', 'Education'],
+    },
+    {
       title: 'P.C.E.A Makupa Parish',
       description: "P.C.E.A Makupa Parish is a place where faith and community come together. The website showcases services, leadership, and opportunities to engage — helping the congregation stay connected both in person and online.",
       image: '/assets/pceamakupaparish.svg',
       link: 'https://pcea-makupa.vercel.app/index.html',
       tags: ['Website', 'Community'],
-    },
-    {
-      title: 'Prudence Showroom',
-      description: 'Prudence Showroom is a dynamic platform designed for buying and selling cars. It connects car buyers and sellers in a seamless and efficient marketplace with detailed listings, a user-friendly interface, and secure transaction options.',
-      image: '/assets/prudence.svg',
-      link: 'https://prudenceshowroom.com/',
-      tags: ['Web App', 'Automotive'],
     },
   ];

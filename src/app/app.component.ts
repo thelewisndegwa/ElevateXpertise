@@ -15,5 +15,5 @@ import { NavbarComponent } from "./shared/navbar/navbar.component";
 
 
 export class AppComponent {
-  title = 'elev8e-expertise';
+  title = 'elevate-expertise';
 }

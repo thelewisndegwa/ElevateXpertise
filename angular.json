@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "elev8e-expertise": {
+    "elevate-expertise": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/elev8e-expertise",
+            "outputPath": "dist/elevate-expertise",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "elev8e-expertise:build:production"
+              "buildTarget": "elevate-expertise:build:production"
             },
             "development": {
-              "buildTarget": "elev8e-expertise:build:development"
+              "buildTarget": "elevate-expertise:build:development"
             }
           },
           "defaultConfiguration": "development"

@@ -22,11 +22,12 @@
         data-aos="fade-up" data-aos-duration="800" [attr.data-aos-delay]="i * 80">
 
         <!-- Image -->
-        <figure class="relative overflow-hidden bg-gray-100">
+        <figure class="relative flex h-52 items-center justify-center overflow-hidden bg-gray-100">
           <img
             [src]="project.image"
             [alt]="project.title"
-            class="h-52 w-full object-cover transition duration-500 group-hover:scale-105"
+            class="h-full w-full object-cover object-center transition duration-500 group-hover:scale-105"
+            [style.object-position]="project.imagePosition || 'center'"
             loading="lazy"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition group-hover:opacity-100"></div>

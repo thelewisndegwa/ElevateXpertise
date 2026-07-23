@@ -10,8 +10,8 @@ export interface Project {
   
   export const projects: Project[] = [
     {
-      title: 'Biashara Assistant',
-      description: 'Your Smart WhatsApp Assistant for Business. Biashara-Assistant helps Kenyan businesses automate customer service, handle bookings, and accept M-Pesa payments directly through WhatsApp. Built for salons, restaurants, service providers, and retail shops to save time and never miss a customer.',
+      title: 'Biashara Business',
+      description: 'Your Smart WhatsApp Assistant for Business. Biashara Business helps Kenyan businesses automate customer service, handle bookings, and accept M-Pesa payments directly through WhatsApp. Built for salons, restaurants, service providers, and retail shops to save time and never miss a customer.',
       image: 'https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg',
       link: 'https://biashara.business/',
       tags: ['AI Automation', 'WhatsApp'],

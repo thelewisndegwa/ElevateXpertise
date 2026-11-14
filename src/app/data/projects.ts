@@ -24,11 +24,18 @@ export interface Project {
       tags: ['Mobile App', 'Real Estate'],
     },
     {
+      title: 'Golden Sail Rong Da Logistics',
+      description: 'Golden Sail App is a digital solution designed to optimize cargo transportation, fleet management, and supply chain operations. It connects shippers, carriers, and drivers on a unified platform, ensuring real-time tracking, efficient route planning, and seamless communication between stakeholders.',
+      image: '/assets/dashboard.svg',
+      link: 'https://goldensail.de/',
+      tags: ['Web App', 'Logistics'],
+    },
+    {
       title: 'Elevate Profile Studio',
       description: 'Premium digital identity for modern professionals. We create elegant portfolio websites, executive profiles, and digital business cards for consultants, founders, and executives across Kenya and Africa.',
       image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&crop=faces&w=900&h=520&q=80',
       imagePosition: 'center 30%',
-      link: 'https://elevate-profile-studio.vercel.app/',
+      link: 'https://elevateprofilestudio.com',
       tags: ['Website', 'Professional Branding'],
     },
     {
@@ -37,13 +44,6 @@ export interface Project {
       image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=900&q=80',
       link: 'https://cross-industry-ai-literacy-program.vercel.app/',
       tags: ['AI', 'Education'],
-    },
-    {
-      title: 'Golden Sail Rong Da Logistics',
-      description: 'Golden Sail App is a digital solution designed to optimize cargo transportation, fleet management, and supply chain operations. It connects shippers, carriers, and drivers on a unified platform, ensuring real-time tracking, efficient route planning, and seamless communication between stakeholders.',
-      image: '/assets/dashboard.svg',
-      link: 'https://goldensail.de/',
-      tags: ['Web App', 'Logistics'],
     },
     {
       title: 'Topnotch Books',
@@ -70,7 +70,7 @@ export interface Project {
       title: 'P.C.E.A Makupa Parish',
       description: "P.C.E.A Makupa Parish is a place where faith and community come together. The website showcases services, leadership, and opportunities to engage — helping the congregation stay connected both in person and online.",
       image: '/assets/pceamakupaparish.svg',
-      link: 'https://pcea-makupa.vercel.app/index.html',
+      link: 'https://pceamakupaparish.org',
       tags: ['Website', 'Community'],
     },
   ];

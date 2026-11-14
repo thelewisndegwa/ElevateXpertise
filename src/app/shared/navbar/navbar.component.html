@@ -19,13 +19,16 @@
           </svg>
         </a>
         <!-- Dropdown Menu with animation -->
-        <div *ngIf="dropdownOpen" class="absolute bg-white shadow-md rounded mt-2 w-48 dropdown-menu">
+        <div *ngIf="dropdownOpen" class="absolute bg-white shadow-md rounded mt-2 w-56 dropdown-menu">
           <ul class="py-2 text-gray-700">
             <li>
-              <a (click)="navigateToAutomation()" class="block px-4 py-2 hover:bg-gray-100 text-black" (click)="closeDropdown()">A.I. Automation</a>
+              <a (click)="navigateToAutomation(); closeDropdown()" class="block px-4 py-2 hover:bg-gray-100 text-black">EX Automation</a>
             </li>
             <li>
-              <a (click)="navigateToTech()" class="block px-4 py-2 hover:bg-gray-100 text-black" (click)="closeDropdown()">Tech</a>
+              <a (click)="navigateToTech(); closeDropdown()" class="block px-4 py-2 hover:bg-gray-100 text-black">EX Tech</a>
+            </li>
+            <li>
+              <a href="https://elevateprofilestudio.com" target="_blank" rel="noopener noreferrer" (click)="closeDropdown()" class="block px-4 py-2 hover:bg-gray-100 text-black">EX Profile Studio</a>
             </li>
           </ul>
         </div>
@@ -64,10 +67,13 @@
       <!-- Dropdown Menu for Mobile with animation -->
       <ul *ngIf="dropdownOpen" class="ml-4 space-y-2 dropdown-menu">
         <li>
-          <a (click)="navigateToAutomation(); closeDropdown(); closeSidebar()" class="text-black hover:text-red-600">A.I. Automation</a>
+          <a (click)="navigateToAutomation(); closeDropdown(); closeSidebar()" class="text-black hover:text-red-600">EX Automation</a>
         </li>
         <li>
-          <a (click)="navigateToTech(); closeDropdown(); closeSidebar()" class="text-black hover:text-red-600">Tech</a>
+          <a (click)="navigateToTech(); closeDropdown(); closeSidebar()" class="text-black hover:text-red-600">EX Tech</a>
+        </li>
+        <li>
+          <a href="https://elevateprofilestudio.com" target="_blank" rel="noopener noreferrer" (click)="closeDropdown(); closeSidebar()" class="text-black hover:text-red-600">EX Profile Studio</a>
         </li>
       </ul>
     </li>

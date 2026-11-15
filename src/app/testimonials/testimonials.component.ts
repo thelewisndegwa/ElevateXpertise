@@ -14,10 +14,10 @@ export class TestimonialsComponent implements OnInit {
 
   // Hardcoded videos array pointing to your assets folder
   videos: any[] = [
-    { url: 'assets/videos/vid1.mp4', playing: false },
-    { url: 'assets/videos/vid2.mp4', playing: false },
     { url: 'assets/videos/vid3.mp4', playing: false },
-    { url: 'assets/videos/cityRealty.mp4', playing: false }
+    { url: 'assets/videos/cityRealty.mp4', playing: false },
+    { url: 'assets/videos/vid1.mp4', playing: false },
+    { url: 'assets/videos/vid2.mp4', playing: false }
   ];
 
   constructor(private router: Router, @Inject(PLATFORM_ID) private platformId: Object) {}

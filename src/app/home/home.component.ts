@@ -18,9 +18,10 @@ export class HomeComponent {
 
   projects = projects.slice(0, 3);
   videos: any[] = [
+    { url: 'assets/videos/vid3.mp4', playing: false },
+    { url: 'assets/videos/cityRealty.mp4', playing: false },
     { url: 'assets/videos/vid1.mp4', playing: false },
-    { url: 'assets/videos/vid2.mp4', playing: false },
-    { url: 'assets/videos/vid3.mp4', playing: false }
+    { url: 'assets/videos/vid2.mp4', playing: false }
   ];
 
   constructor(

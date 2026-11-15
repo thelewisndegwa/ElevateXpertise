@@ -24,7 +24,8 @@
           <video
             [id]="'testimonial-video-' + i"
             class="absolute top-0 left-0 w-full h-full object-cover"
-            preload="metadata"
+            [poster]="video.poster"
+            preload="none"
             playsinline
             controls
             (play)="onVideoPlay(i)"
@@ -33,10 +34,18 @@
             Your browser does not support the video tag.
           </video>
 
+          <!-- Still frame. Mobile browsers leave the player black until a tap. -->
+          <img
+            *ngIf="!video.playing"
+            [src]="video.poster"
+            alt=""
+            class="absolute inset-0 z-10 h-full w-full object-cover"
+          />
+
           <!-- Play button overlay -->
           <div
             *ngIf="!video.playing"
-            class="absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity group-hover:bg-black/40"
+            class="absolute inset-0 z-20 flex items-center justify-center bg-black/30 transition-opacity group-hover:bg-black/40"
           >
             <div class="flex h-16 w-16 items-center justify-center rounded-full bg-white/90 shadow-lg transition group-hover:scale-110">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-red-600 ml-1" fill="currentColor" viewBox="0 0 24 24">
@@ -56,8 +65,8 @@
     <h2 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">
       Ready to Join Our Happy Clients?
     </h2>
-    <a (click)="navigateToContact()"
-      class="cursor-pointer mt-8 inline-flex items-center rounded-lg bg-white px-10 py-4 text-base font-semibold text-red-600 shadow-lg transition hover:bg-gray-50 hover:shadow-xl">
+    <a routerLink="/contact"
+      class="mt-8 inline-flex items-center rounded-lg bg-white px-10 py-4 text-base font-semibold text-red-600 shadow-lg transition hover:bg-gray-50 hover:shadow-xl">
       Schedule a Free Consultation
       <span class="ml-2" aria-hidden="true">→</span>
     </a>

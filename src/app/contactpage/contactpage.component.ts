@@ -1,5 +1,4 @@
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -24,16 +23,7 @@ export class ContactpageComponent {
   snackbarMessage = '';
   snackbarType = ''; // 'success' or 'error'
 
-  constructor(private http: HttpClient, private mailerService: MailerService,  @Inject(PLATFORM_ID) private platformId: Object) {}
-
- 
-  ngOnInit(): void {
-    if (isPlatformBrowser(this.platformId)) {
-      import('aos').then(AOS => {
-        AOS.default.init(); 
-      });
-    }
-  }
+  constructor(private mailerService: MailerService, @Inject(PLATFORM_ID) private platformId: Object) {}
 
   onSubmit(): void {
     // Form validation

@@ -33,13 +33,12 @@
       <div
         class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4"
       >
-        <button
-          type="button"
-          (click)="navigateToContact()"
+        <a
+          routerLink="/contact"
           class="inline-flex items-center justify-center rounded-full bg-red-500 px-7 py-3 text-sm font-semibold text-white shadow-lg shadow-red-500/30 transition hover:bg-red-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-300"
         >
           Book a strategy call
-        </button>
+        </a>
         <a
           href="https://wa.me/16086081288?text=Hi! I'm interested in learning more about your services."
           target="_blank"
@@ -51,7 +50,8 @@
           Chat on WhatsApp
         </a>
         <a
-          href="#services"
+          routerLink="/"
+          fragment="services"
           class="inline-flex items-center justify-center rounded-full border border-gray-300 px-7 py-3 text-sm font-semibold text-gray-700 transition hover:border-gray-400 hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400"
         >
           Explore services
@@ -102,60 +102,21 @@
     <div
       class="flex flex-wrap items-center gap-x-8 gap-y-2 text-sm text-gray-600"
     >
-      <a
-        href="https://biashara.business/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="rounded-full border border-gray-300 px-3 py-1 hover:border-red-400 hover:text-red-600 transition"
-        >Biashara Business</a
-      >
-      <a
-        href="https://play.google.com/store/apps/details?id=com.cityrealty.landlord_tenant"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="rounded-full border border-gray-300 px-3 py-1 hover:border-red-400 hover:text-red-600 transition"
-        >City Realty</a
-      >
-      <a
-        href="https://elevateprofilestudio.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="rounded-full border border-gray-300 px-3 py-1 hover:border-red-400 hover:text-red-600 transition"
-        >Elevate Profile Studio</a
-      >
-      <span
-        class="cursor-default rounded-full border border-gray-300 px-3 py-1"
-        >AI in Action</span
-      >
-      <a
-        href="https://goldensail.de/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="rounded-full border border-gray-300 px-3 py-1 hover:border-red-400 hover:text-red-600 transition"
-        >Golden Sail</a
-      >
-      <span
-        class="cursor-default rounded-full border border-gray-300 px-3 py-1"
-        >Topnotch Books</span
-      >
-      <span
-        class="cursor-default rounded-full border border-gray-300 px-3 py-1"
-        >Murphy Auctioneers</span
-      >
-      <a
-        href="https://www.codekenya.org/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="rounded-full border border-gray-300 px-3 py-1 hover:border-red-400 hover:text-red-600 transition"
-        >Code Kenya</a
-      >
-      <a
-        href="https://pceamakupaparish.org"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="rounded-full border border-gray-300 px-3 py-1 hover:border-red-400 hover:text-red-600 transition"
-        >P.C.E.A Makupa Parish</a
-      >
+      <ng-container *ngFor="let client of clients">
+        <a
+          *ngIf="client.href"
+          [href]="client.href"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="rounded-full border border-gray-300 px-3 py-1 hover:border-red-400 hover:text-red-600 transition"
+          >{{ client.name }}</a
+        >
+        <span
+          *ngIf="!client.href"
+          class="cursor-default rounded-full border border-gray-300 px-3 py-1"
+          >{{ client.name }}</span
+        >
+      </ng-container>
     </div>
   </div>
 </section>
@@ -164,8 +125,6 @@
 <section
   id="services"
   class="bg-white py-16 text-gray-900 sm:py-20"
-  data-aos="fade-up"
-  data-aos-duration="1000"
 >
   <div class="mx-auto max-w-6xl px-6">
     <!-- Section Heading -->
@@ -181,91 +140,42 @@
 
     <!-- Cards Container -->
     <div class="mt-10 grid gap-8 md:grid-cols-3">
-      <!-- Card: EX AI Automation -->
       <article
+        *ngFor="let offering of offerings; let i = index"
         class="group flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-md transition hover:-translate-y-1 hover:border-red-400/70 hover:shadow-xl"
         data-aos="fade-up"
-        data-aos-duration="1100"
+        [attr.data-aos-duration]="1100 + i * 200"
       >
         <figure class="overflow-hidden rounded-xl">
           <img
-            src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=900&q=80"
-            alt="Two people shaking hands in front of a robot representing AI automation and collaboration"
+            [src]="offering.image"
+            [alt]="offering.alt"
             class="h-44 w-full object-cover transition duration-700 group-hover:scale-105"
+            [style.object-position]="offering.imagePosition || 'center'"
             loading="lazy"
           />
         </figure>
-        <h3 class="mt-5 text-lg font-semibold text-gray-900">EX Automation</h3>
-        <p class="mt-3 text-sm text-gray-600">
-          Chatbots, workflows, and follow-up that run without a person in the loop.
-        </p>
-        <button
-          type="button"
-          (click)="navigateToAutomation()"
-          class="mt-6 inline-flex items-center text-sm font-semibold text-red-600 hover:text-red-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400/60"
-        >
-          Explore EX Automation
-          <span aria-hidden="true" class="ml-1">→</span>
-        </button>
-      </article>
-
-      <!-- Card: EX Tech -->
-      <article
-        class="group flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-md transition hover:-translate-y-1 hover:border-red-400/70 hover:shadow-xl"
-        data-aos="fade-up"
-        data-aos-duration="1300"
-      >
-        <figure class="overflow-hidden rounded-xl">
-          <img
-            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
-            alt="Laptop computer with multiple screens displaying different applications"
-            class="h-44 w-full object-cover transition duration-700 group-hover:scale-105"
-            loading="lazy"
-          />
-        </figure>
-        <h3 class="mt-5 text-lg font-semibold text-gray-900">EX Tech</h3>
-        <p class="mt-3 text-sm text-gray-600">
-          Web apps, mobile products, and platforms built around how you work.
-        </p>
-        <button
-          type="button"
-          (click)="navigateToTech()"
-          class="mt-6 inline-flex items-center text-sm font-semibold text-red-600 hover:text-red-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400/60"
-        >
-          Explore EX Tech
-          <span aria-hidden="true" class="ml-1">→</span>
-        </button>
-      </article>
-
-      <!-- Card: EX Profile Studio -->
-      <article
-        class="group flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-md transition hover:-translate-y-1 hover:border-red-400/70 hover:shadow-xl"
-        data-aos="fade-up"
-        data-aos-duration="1500"
-      >
-        <figure class="overflow-hidden rounded-xl">
-          <img
-            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&crop=faces&w=900&h=520&q=80"
-            alt="Professional portrait representing a personal website and digital identity"
-            class="h-44 w-full object-cover object-[center_30%] transition duration-700 group-hover:scale-105"
-            loading="lazy"
-          />
-        </figure>
-        <h3 class="mt-5 text-lg font-semibold text-gray-900">EX Profile Studio</h3>
-        <p class="mt-3 text-sm text-gray-600">
-          Portfolio sites and profiles that make a clear first impression.
-        </p>
+        <h3 class="mt-5 text-lg font-semibold text-gray-900">{{ offering.title }}</h3>
+        <p class="mt-3 text-sm text-gray-600">{{ offering.description }}</p>
         <a
-          href="https://elevateprofilestudio.com"
+          *ngIf="offering.external"
+          [href]="offering.link"
           target="_blank"
           rel="noopener noreferrer"
           class="mt-6 inline-flex items-center text-sm font-semibold text-red-600 hover:text-red-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400/60"
         >
-          Visit EX Profile Studio
+          {{ offering.cta }}
           <span aria-hidden="true" class="ml-1">↗</span>
         </a>
+        <a
+          *ngIf="!offering.external"
+          [routerLink]="offering.link"
+          class="mt-6 inline-flex items-center text-sm font-semibold text-red-600 hover:text-red-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400/60"
+        >
+          {{ offering.cta }}
+          <span aria-hidden="true" class="ml-1">→</span>
+        </a>
       </article>
-
     </div>
   </div>
 </section>
@@ -289,14 +199,13 @@
         </h2>
       </div>
       <div class="mt-2 md:mt-0">
-        <button
-          type="button"
-          (click)="navigateToProjects()"
+        <a
+          routerLink="/projects"
           class="inline-flex items-center rounded-full border border-gray-300 px-5 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-gray-700 hover:border-red-400 hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400/70"
         >
           All projects
           <span aria-hidden="true" class="ml-2">↗</span>
-        </button>
+        </a>
       </div>
     </div>
 
@@ -359,13 +268,12 @@
       >
         Client stories.
       </h2>
-      <button
-        type="button"
-        (click)="navigateToTestimonials()"
+      <a
+        routerLink="/testimonials"
         class="inline-flex items-center rounded-full border border-gray-300 px-5 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-gray-700 hover:border-red-400 hover:bg-gray-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400/70"
       >
         View all
-      </button>
+      </a>
     </div>
 
     <!-- Testimonial Videos -->
@@ -383,7 +291,8 @@
           <video
             [id]="'home-video-' + i"
             class="absolute inset-0 h-full w-full object-cover"
-            preload="metadata"
+            [poster]="video.poster"
+            preload="none"
             playsinline
             controls
             (play)="onVideoPlay(i)"
@@ -392,10 +301,18 @@
             Your browser does not support the video tag.
           </video>
 
+          <!-- Still frame. Mobile browsers leave the player black until a tap. -->
+          <img
+            *ngIf="!video.playing"
+            [src]="video.poster"
+            alt=""
+            class="absolute inset-0 z-10 h-full w-full object-cover"
+          />
+
           <!-- Play button overlay — visible until video starts -->
           <div
             *ngIf="!video.playing"
-            class="absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity group-hover:bg-black/40"
+            class="absolute inset-0 z-20 flex items-center justify-center bg-black/30 transition-opacity group-hover:bg-black/40"
           >
             <div class="flex h-16 w-16 items-center justify-center rounded-full bg-white/90 shadow-lg transition group-hover:scale-110">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-red-600 ml-1" fill="currentColor" viewBox="0 0 24 24">
@@ -419,13 +336,12 @@
         </h3>
       </div>
       <div class="mt-6 md:mt-0 md:text-right">
-        <button
-          type="button"
-          (click)="navigateToContact()"
+        <a
+          routerLink="/contact"
           class="inline-flex items-center justify-center rounded-full bg-red-600 px-7 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-red-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-400"
         >
           Schedule a free consultation
-        </button>
+        </a>
       </div>
     </div>
   </div>
